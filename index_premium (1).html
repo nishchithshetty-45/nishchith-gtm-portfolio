@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nishchith U Shetty — GTM & AI Automation Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Cabinet+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+:root{
+  --bg:#f2ede4;--bg2:#e9e3d8;--bg3:#ddd7ca;
+  --ink:#13110e;--ink2:#4d4840;--ink3:#9c9187;
+  --g:#1a5c38;--gl:#c4e0cf;--gx:#0f3d25;
+  --cream:#faf6ee;
+  --b:rgba(19,17,14,.07);--b2:rgba(19,17,14,.14);--b3:rgba(19,17,14,.22);
+  --serif:'Fraunces',Georgia,serif;
+  --mono:'DM Mono',monospace;
+  --sans:'Cabinet Grotesk',system-ui,sans-serif;
+  --sh:0 1px 3px rgba(19,17,14,.06),0 4px 16px rgba(19,17,14,.06);
+  --sh2:0 2px 8px rgba(19,17,14,.04),0 16px 48px rgba(19,17,14,.10);
+  --sh3:0 4px 24px rgba(19,17,14,.08),0 32px 80px rgba(19,17,14,.14);
+}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:15px;line-height:1.6;overflow-x:hidden;cursor:none;-webkit-font-smoothing:antialiased}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23g)' opacity='.042'/%3E%3C/svg%3E")}
+#cur{position:fixed;width:12px;height:12px;background:var(--g);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .22s cubic-bezier(.34,1.56,.64,1),height .22s cubic-bezier(.34,1.56,.64,1),background .2s;mix-blend-mode:multiply}
+#cur.big{width:44px;height:44px;opacity:.18}
+#cur.click{width:7px;height:7px}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:0 52px;height:60px;display:flex;align-items:center;justify-content:space-between;background:rgba(242,237,228,.9);backdrop-filter:blur(24px) saturate(1.4);border-bottom:1px solid var(--b2)}
+.logo{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:-.3px;display:flex;align-items:center;gap:2px}
+.logo em{font-style:italic;color:var(--g)}
+.logo-dot{width:6px;height:6px;background:var(--g);border-radius:50%;margin-left:2px;margin-bottom:8px;animation:pulse-dot 2.4s ease infinite}
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+.nav-links{display:flex;align-items:center;gap:0;list-style:none}
+.nav-links a{font-size:11.5px;font-weight:500;letter-spacing:.055em;text-transform:uppercase;color:var(--ink3);text-decoration:none;padding:0 18px;height:60px;display:flex;align-items:center;border-left:1px solid var(--b);transition:color .2s,background .2s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--g);transform:scaleX(0);transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+.nav-links a:hover{color:var(--ink);background:rgba(19,17,14,.025)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-cta{background:var(--ink)!important;color:var(--cream)!important;padding:0 22px!important;font-weight:700!important;letter-spacing:.06em!important}
+.nav-cta::after{display:none!important}
+.nav-cta:hover{background:var(--g)!important;color:#fff!important}
+.hero{min-height:100vh;padding:60px 0 0;display:grid;grid-template-rows:1fr auto}
+.hero-main{max-width:1400px;margin:0 auto;width:100%;padding:72px 52px 52px;display:grid;grid-template-columns:1fr 460px;gap:0;align-items:center}
+.hero-left{padding-right:64px;border-right:1px solid var(--b2)}
+.eyebrow{font-family:var(--mono);font-size:10.5px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--g);display:inline-flex;align-items:center;gap:10px;margin-bottom:32px;opacity:0;animation:fu .5s .05s ease both}
+.eyebrow-pip{display:inline-block;width:24px;height:1.5px;background:var(--g)}
+h1.headline{font-family:var(--serif);font-size:clamp(56px,6.8vw,96px);line-height:.96;letter-spacing:-2.5px;font-weight:400;color:var(--ink);margin-bottom:44px;opacity:0;animation:fu .65s .12s ease both}
+h1.headline em{font-style:italic;color:var(--g)}
+.indent1{display:block;padding-left:clamp(60px,7vw,110px)}
+.indent2{display:block;padding-left:clamp(120px,14vw,220px)}
+.hero-sub{font-size:16.5px;color:var(--ink2);line-height:1.75;max-width:46ch;font-weight:400;opacity:0;animation:fu .6s .2s ease both}
+.hero-sub strong{color:var(--ink);font-weight:700}
+.hero-btns{display:flex;gap:12px;margin-top:36px;align-items:center;opacity:0;animation:fu .5s .28s ease both}
+.btn-solid{background:var(--ink);color:var(--cream);padding:14px 28px;font-size:13px;font-weight:700;text-decoration:none;letter-spacing:.02em;display:inline-flex;align-items:center;gap:8px;transition:background .2s,transform .15s,box-shadow .2s;border-radius:2px}
+.btn-solid:hover{background:var(--g);transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,92,56,.25)}
+.btn-ghost{color:var(--ink3);font-size:13px;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:color .2s}
+.btn-ghost span{font-size:13px}
+.btn-ghost:hover{color:var(--ink)}
+.hero-right{padding-left:52px;display:flex;flex-direction:column;gap:2px;opacity:0;animation:fu .6s .35s ease both}
+.hstat{padding:24px 28px;background:var(--cream);border:1px solid var(--b2);transition:border-color .25s,transform .25s,box-shadow .25s;position:relative;overflow:hidden}
+.hstat::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--g);transform:scaleY(0);transform-origin:bottom;transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
+.hstat:hover{border-color:var(--b3);transform:translateX(3px);box-shadow:var(--sh)}
+.hstat:hover::before{transform:scaleY(1)}
+.hstat.dark{background:var(--ink);border-color:var(--ink)}
+.hstat.dark::before{background:var(--gl)}
+.hstat.dark .hn{color:#fff}
+.hstat.dark .hlab{color:rgba(255,255,255,.4)}
+.hstat.dark .hdesc{color:rgba(255,255,255,.25)}
+.hstat.green-bg{background:var(--g);border-color:var(--g)}
+.hstat.green-bg .hn{color:#fff}
+.hstat.green-bg .hlab{color:rgba(255,255,255,.5)}
+.hstat.green-bg .hdesc{color:rgba(255,255,255,.3)}
+.hn{font-family:var(--serif);font-size:clamp(32px,3.5vw,48px);line-height:1;letter-spacing:-1.2px;font-weight:400;color:var(--ink);margin-bottom:5px}
+.hlab{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink3)}
+.hdesc{font-family:var(--mono);font-size:11px;color:var(--ink3);margin-top:3px;letter-spacing:.03em}
+.hero-strip{border-top:1px solid var(--b2);display:grid;grid-template-columns:repeat(4,1fr);max-width:1400px;margin:0 auto;width:100%}
+.hstrip-item{padding:16px 28px;border-right:1px solid var(--b2);display:flex;align-items:center;gap:12px}
+.hstrip-item:last-child{border-right:none}
+.hstrip-n{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--ink);letter-spacing:-.5px;white-space:nowrap}
+.hstrip-l{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3)}
+.mq-wrap{overflow:hidden;border-top:1px solid var(--b2);border-bottom:1px solid var(--b2);background:var(--ink);padding:14px 0}
+.mq-track{display:flex;width:max-content;animation:mq 32s linear infinite}
+.mq-track:hover{animation-play-state:paused}
+.mq-item{display:flex;align-items:center;gap:12px;padding:0 22px;white-space:nowrap;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+.mq-item:hover{color:rgba(255,255,255,.7)}
+.mq-dot{width:3px;height:3px;background:var(--g);border-radius:50%;flex-shrink:0}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.sec{max-width:1400px;margin:0 auto;padding:100px 52px}
+.sec-eye{font-family:var(--mono);font-size:10.5px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--g);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.sec-eye::before{content:'//';color:var(--ink3)}
+.sec-title{font-family:var(--serif);font-size:clamp(40px,4.2vw,64px);font-weight:400;line-height:1.02;letter-spacing:-1.5px;color:var(--ink);margin-bottom:14px}
+.sec-title em{font-style:italic}
+.sec-sub{font-size:16px;color:var(--ink2);max-width:520px;line-height:1.72;margin-bottom:56px;font-weight:400}
+#events{background:var(--bg);border-bottom:1px solid var(--b2)}
+.events-header{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:52px}
+.events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--b2)}
+.ev{background:var(--cream);padding:40px 34px;position:relative;overflow:hidden;transition:background .28s,transform .28s,box-shadow .28s}
+.ev:hover{background:#fff;box-shadow:var(--sh2);transform:translate(-1px,-1px);z-index:2}
+.ev-bar{position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--g);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.34,1.56,.64,1)}
+.ev:hover .ev-bar{transform:scaleX(1)}
+.ev::before{content:attr(data-n);position:absolute;bottom:-10px;right:20px;font-family:var(--serif);font-size:110px;font-weight:400;color:var(--b);line-height:1;pointer-events:none;font-style:italic;transition:color .3s}
+.ev:hover::before{color:var(--b2)}
+.ev.feat{background:var(--ink);grid-column:span 2}
+.ev.feat:hover{background:#1a1714;box-shadow:var(--sh3)}
+.ev.feat::before{color:rgba(255,255,255,.04)}
+.ev.feat:hover::before{color:rgba(255,255,255,.07)}
+.ev.feat .ev-bar{background:var(--gl)}
+.ev-tag{font-family:var(--mono);font-size:9.5px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin-bottom:20px;display:flex;align-items:center;gap:8px;position:relative;z-index:1}
+.ev.feat .ev-tag{color:rgba(255,255,255,.3)}
+.ev-pip{width:6px;height:6px;border-radius:50%;background:var(--g);flex-shrink:0}
+.ev.feat .ev-pip{background:var(--gl)}
+.ev-name{font-family:var(--serif);font-size:26px;font-weight:400;color:var(--ink);line-height:1.15;margin-bottom:10px;position:relative;z-index:1;letter-spacing:-.3px}
+.ev.feat .ev-name{color:#fff;font-size:36px;letter-spacing:-.6px}
+.ev-desc{font-size:13.5px;color:var(--ink2);line-height:1.62;margin-bottom:24px;position:relative;z-index:1}
+.ev.feat .ev-desc{color:rgba(255,255,255,.5);font-size:14px}
+.ev-cities{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px;position:relative;z-index:1}
+.ctag{font-family:var(--mono);font-size:10px;letter-spacing:.06em;padding:4px 12px;background:var(--bg2);color:var(--ink2);border:1px solid var(--b2)}
+.ev.feat .ctag{background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.12)}
+.ev-stats{display:flex;gap:28px;position:relative;z-index:1;align-items:flex-end}
+.es{display:flex;flex-direction:column}
+.es-n{font-family:var(--serif);font-size:36px;font-weight:400;color:var(--ink);letter-spacing:-1px;line-height:1}
+.ev.feat .es-n{color:#fff;font-size:52px;letter-spacing:-1.5px}
+.es-l{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-top:5px}
+.ev.feat .es-l{color:rgba(255,255,255,.35)}
+.dark-sec{background:var(--ink);padding:100px 0}
+.dark-inner{max-width:1400px;margin:0 auto;padding:0 52px}
+.dark-header{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:52px}
+.dark-inner .sec-eye{color:rgba(255,255,255,.25)}
+.dark-inner .sec-eye::before{color:rgba(255,255,255,.15)}
+.dark-inner .sec-title{color:#fff}
+.dark-inner .sec-sub{color:rgba(255,255,255,.38);margin-bottom:0}
+.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(255,255,255,.05)}
+.wc{background:rgba(255,255,255,.03);padding:38px 34px;position:relative;overflow:hidden;transition:background .25s,transform .25s}
+.wc:hover{background:rgba(255,255,255,.065);transform:translate(-1px,-1px);z-index:2}
+.wc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--g),transparent 60%);opacity:0;transition:opacity .3s}
+.wc:hover::before{opacity:1}
+.wc-n{font-family:var(--serif);font-size:clamp(44px,4vw,60px);font-weight:400;color:#fff;letter-spacing:-1.5px;line-height:1;margin-bottom:10px}
+.wc-n sup{font-size:24px;color:rgba(255,255,255,.25);vertical-align:super}
+.wc-title{font-size:14px;font-weight:700;color:#fff;margin-bottom:10px;letter-spacing:.01em}
+.wc-desc{font-size:13px;color:rgba(255,255,255,.4);line-height:1.65}
+.wc-tools{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.wt{font-family:var(--mono);font-size:10px;letter-spacing:.06em;padding:4px 10px;background:rgba(255,255,255,.05);color:rgba(255,255,255,.35);border:1px solid rgba(255,255,255,.08);border-radius:2px}
+
+/* ── Testimonials ── 2-col grid for 4 cards */
+.testi-sec{max-width:1400px;margin:0 auto;padding:100px 52px}
+.testi-header{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:52px}
+.testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--b2)}
+.tcard{background:var(--cream);padding:36px 32px;position:relative;transition:background .25s,transform .25s,box-shadow .25s}
+.tcard:hover{background:#fff;transform:translate(-1px,-2px);box-shadow:var(--sh2);z-index:2}
+.tcard-quote{font-family:var(--serif);position:absolute;top:22px;right:26px;font-size:60px;line-height:1;color:var(--gl);font-style:italic;transition:color .3s}
+.tcard:hover .tcard-quote{color:var(--g);opacity:.3}
+.tcard-star{font-size:11px;letter-spacing:3px;color:var(--g);margin-bottom:16px;opacity:.7}
+.tq{font-family:var(--serif);font-style:italic;font-size:15.5px;color:var(--ink2);line-height:1.72;margin-bottom:28px}
+.ta{display:flex;align-items:center;gap:12px}
+.ta-av{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;font-family:var(--sans)}
+.ta-av.g{background:var(--gl);color:var(--g)}
+.ta-av.d{background:#e4e0f8;color:#5b4fcf}
+.ta-av.o{background:#fde8d8;color:#c84b0a}
+.ta-av.p{background:#fce7f3;color:#be185d}
+.ta-name{font-size:13px;font-weight:700;color:var(--ink)}
+.ta-role{font-family:var(--mono);font-size:10.5px;color:var(--ink3);letter-spacing:.03em}
+
+/* ── featured tcard (Shruti — real email screenshot) ── */
+.tcard.featured{background:var(--ink);grid-column:span 2}
+.tcard.featured:hover{background:#1a1714}
+.tcard.featured .tcard-quote{color:rgba(255,255,255,.08)}
+.tcard.featured:hover .tcard-quote{color:rgba(255,255,255,.15);opacity:1}
+.tcard.featured .tq{color:rgba(255,255,255,.55)}
+.tcard.featured .tcard-star{color:var(--gl)}
+.tcard.featured .ta-name{color:#fff}
+.tcard.featured .ta-role{color:rgba(255,255,255,.35)}
+.tcard.featured .email-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gl);border:1px solid rgba(196,224,207,.25);padding:4px 12px;margin-bottom:18px}
+.tcard.featured .email-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gl);flex-shrink:0}
+
+.flow-sec{background:var(--bg2);border-top:1px solid var(--b2);border-bottom:1px solid var(--b2);padding:88px 0}
+.flow-inner{max-width:1400px;margin:0 auto;padding:0 52px}
+.flow-header{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:64px}
+.flow-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--b2)}
+.fstep{background:var(--bg2);padding:32px 24px;display:flex;flex-direction:column;align-items:flex-start;transition:background .25s;position:relative}
+.fstep:hover{background:var(--cream)}
+.fstep:hover .fstep-num{color:var(--g)}
+.fstep:hover .ficon{border-color:var(--g)}
+.fstep:hover .ficon svg{stroke:var(--g)}
+.fstep-num{font-family:var(--mono);font-size:10px;letter-spacing:.15em;color:var(--ink3);margin-bottom:24px;transition:color .25s}
+.ficon{width:52px;height:52px;background:var(--bg3);border:1px solid var(--b2);display:flex;align-items:center;justify-content:center;margin-bottom:20px;transition:border-color .25s,background .25s}
+.ficon svg{width:22px;height:22px;stroke:var(--ink2);stroke-width:1.6;transition:stroke .25s;fill:none}
+.ficon.active-ic{background:var(--ink);border-color:var(--ink)}
+.ficon.active-ic svg{stroke:#fff}
+.fstep:hover .ficon.active-ic{background:var(--g);border-color:var(--g)}
+.flabel{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:6px}
+.fsub{font-family:var(--mono);font-size:11px;color:var(--ink3);line-height:1.5;letter-spacing:.02em}
+#stack{background:var(--bg);border-bottom:1px solid var(--b2)}
+.stack-header{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:48px}
+.stack-cats{display:flex;flex-direction:column;gap:0;border:1px solid var(--b2);overflow:hidden}
+.scat{display:grid;grid-template-columns:172px 1fr;border-bottom:1px solid var(--b2)}
+.scat:last-child{border-bottom:none}
+.scat-label{padding:22px 26px;background:var(--bg2);border-right:1px solid var(--b2);font-family:var(--mono);font-size:10.5px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--g);display:flex;align-items:center}
+.scat-tools{padding:18px 24px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:var(--cream)}
+.ltool{display:flex;align-items:center;gap:8px;padding:8px 14px;background:var(--bg);border:1px solid var(--b2);transition:border-color .2s,background .2s,transform .2s,box-shadow .2s;cursor:default;white-space:nowrap}
+.ltool:hover{border-color:var(--b3);background:#fff;transform:translateY(-2px);box-shadow:0 4px 14px rgba(19,17,14,.08)}
+.ltool img{width:17px;height:17px;object-fit:contain;flex-shrink:0}
+.ltool span{font-size:12.5px;font-weight:500;color:var(--ink)}
+.ltool .lico{width:17px;height:17px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:#fff}
+#book{border-top:1px solid var(--b2)}
+.book-outer{max-width:1400px;margin:0 auto;padding:100px 52px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.book-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--g);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.book-kicker::before{content:'//';color:var(--ink3)}
+.book-quote{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--ink);line-height:1.7;padding:28px 28px 28px 34px;border-left:3px solid var(--g);background:var(--cream);margin:32px 0 36px;position:relative}
+.book-quote::before{content:'\201C';position:absolute;top:14px;left:12px;font-size:32px;color:var(--gl);line-height:1;font-style:normal}
+.guarantee{list-style:none;display:flex;flex-direction:column;gap:12px}
+.guarantee li{display:flex;align-items:flex-start;gap:12px;font-size:14.5px;color:var(--ink2);line-height:1.5}
+.gchk{width:22px;height:22px;background:var(--gl);color:var(--g);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;margin-top:1px}
+.bcard{background:var(--ink);padding:44px 40px;position:relative;overflow:hidden}
+.bcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--g),var(--gl) 60%,transparent)}
+.bcard-title{font-family:var(--serif);font-size:24px;font-weight:400;color:#fff;margin-bottom:3px;letter-spacing:-.3px}
+.bcard-sub{font-family:var(--mono);font-size:11px;letter-spacing:.07em;color:rgba(255,255,255,.28);margin-bottom:32px}
+.fg{display:flex;flex-direction:column;gap:14px}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fw{display:flex;flex-direction:column;gap:5px}
+.fw label{font-family:var(--mono);font-size:10px;font-weight:400;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.32)}
+.fw input,.fw select,.fw textarea{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:12px 16px;color:#fff;font-family:var(--sans);font-size:14px;font-weight:400;outline:none;width:100%;transition:border-color .2s,background .2s;border-radius:2px}
+.fw input::placeholder,.fw textarea::placeholder{color:rgba(255,255,255,.2)}
+.fw input:focus,.fw select:focus,.fw textarea:focus{border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.07)}
+.fw select option{background:#1a1714;color:#fff}
+.fw textarea{resize:vertical;min-height:90px}
+.fsub-btn{width:100%;margin-top:6px;background:var(--g);color:#fff;border:none;padding:15px;font-family:var(--sans);font-size:14px;font-weight:700;cursor:pointer;letter-spacing:.04em;transition:background .2s,transform .15s,box-shadow .2s;border-radius:2px}
+.fsub-btn:hover{background:var(--gx);transform:translateY(-1px);box-shadow:0 6px 20px rgba(26,92,56,.3)}
+.bcard-meta{margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.07);display:flex;gap:22px;flex-wrap:wrap}
+.bcard-meta a{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;color:rgba(255,255,255,.28);text-decoration:none;transition:color .2s}
+.bcard-meta a:hover{color:rgba(255,255,255,.65)}
+.success{display:none;text-align:center;padding:36px 0;color:#fff}
+.stk{width:56px;height:56px;background:var(--g);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:24px}
+.success h4{font-family:var(--serif);font-size:24px;font-weight:400;margin-bottom:6px}
+.success p{font-family:var(--mono);font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.06em}
+footer{border-top:1px solid var(--b2);padding:28px 52px;display:flex;align-items:center;justify-content:space-between}
+.flogo{font-family:var(--serif);font-size:18px;color:var(--ink2)}
+.flogo em{font-style:italic;color:var(--g)}
+.footer-links{display:flex;gap:28px;list-style:none}
+.footer-links a{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--ink)}
+.fr-txt{font-family:var(--mono);font-size:10.5px;color:var(--ink3);letter-spacing:.05em}
+.div{height:1px;background:var(--b2);margin:0 52px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s cubic-bezier(.22,1,.36,1),transform .65s cubic-bezier(.22,1,.36,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal-d1{transition-delay:.07s}.reveal-d2{transition-delay:.14s}
+.reveal-d3{transition-delay:.21s}.reveal-d4{transition-delay:.28s}
+.reveal-d5{transition-delay:.35s}
+@keyframes fu{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@media(max-width:1024px){
+  nav{padding:0 20px}
+  .nav-links{display:none}
+  .hero-main{grid-template-columns:1fr;padding:60px 20px 32px}
+  .hero-left{border-right:none;padding-right:0}
+  .hero-right{padding-left:0;margin-top:32px}
+  .hero-strip{display:none}
+  .sec,.testi-sec{padding:64px 20px}
+  .dark-inner,.flow-inner{padding:0 20px}
+  .dark-sec,.flow-sec{padding:64px 0}
+  .book-outer{padding:64px 20px;grid-template-columns:1fr;gap:40px}
+  .events-header,.dark-header,.testi-header,.flow-header,.stack-header{grid-template-columns:1fr;gap:20px}
+  .events-grid,.work-grid,.testi-grid{grid-template-columns:1fr}
+  .ev.feat,.tcard.featured{grid-column:span 1}
+  .flow-steps{grid-template-columns:1fr 1fr;gap:2px}  .scat{grid-template-columns:1fr}
+  .scat-label{border-right:none;border-bottom:1px solid var(--b2)}
+  .fr{grid-template-columns:1fr}
+  footer{flex-direction:column;gap:12px;text-align:center;padding:24px 20px}
+  .footer-links{justify-content:center}
+  .div{margin:0 20px}
+  h1.headline .indent1,.indent2{padding-left:0}
+}
+</style>
+</head>
+<body>
+<div id="cur"></div>
+<nav>
+  <a href="#" class="logo">Nish<em>chith.</em><span class="logo-dot"></span></a>
+  <ul class="nav-links">
+    <li><a href="#events">Events</a></li>
+    <li><a href="#systems">Systems</a></li>
+    <li><a href="#stack">Stack</a></li>
+    <li><a href="#book" class="nav-cta">Book a Task &rarr;</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="hero">
+  <div class="hero-main">
+    <div class="hero-left">
+      <div class="eyebrow"><span class="eyebrow-pip"></span>GTM &amp; AI Automation Engineer &middot; Bengaluru, IN</div>
+      <h1 class="headline">I don&rsquo;t run<span class="indent1">campaigns. I</span><span class="indent2"><em>build engines.</em></span></h1>
+      <p class="hero-sub">ICP definition &rarr; enriched lists &rarr; AI-sequenced outreach &rarr; live dashboard &rarr; SOPs your team owns. <strong>25+ tools in production.</strong> Zero hand-holding after handoff.</p>
+      <div class="hero-btns">
+        <a href="#book" class="btn-solid">Send me your goal &rarr;</a>
+        <a href="#events" class="btn-ghost">See the work <span>&darr;</span></a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hstat dark"><div class="hn counter" data-target="140">0</div><div class="hlab">ICP Fills &middot; PLF Hyderabad</div><div class="hdesc">Paid, ICP-defined &middot; 2-day AI conference</div></div>
+      <div class="hstat"><div class="hn">9%</div><div class="hlab">Email Conversion Rate</div><div class="hdesc">6,000 leads &middot; &#8377;1,499 paid registration</div></div>
+      <div class="hstat green-bg"><div class="hn">65&ndash;70%</div><div class="hlab">Open Rate &middot; All Campaigns</div><div class="hdesc">4&times; industry benchmark &middot; multi-sequence cold</div></div>
+      <div class="hstat"><div class="hn">30&ndash;35%</div><div class="hlab">Reply Rate &middot; Multi-touch</div><div class="hdesc">Email &rarr; LinkedIn &rarr; WhatsApp &middot; auto-sequenced</div></div>
+    </div>
+  </div>
+  <div class="hero-strip">
+    <div class="hstrip-item"><div><div class="hstrip-n">11+</div><div class="hstrip-l">Events GTM&rsquo;d</div></div></div>
+    <div class="hstrip-item"><div><div class="hstrip-n">25+</div><div class="hstrip-l">Tools in production</div></div></div>
+    <div class="hstrip-item"><div><div class="hstrip-n">1,500+</div><div class="hstrip-l">ICP leads / quarter</div></div></div>
+    <div class="hstrip-item"><div><div class="hstrip-n">40%</div><div class="hstrip-l">ICP lead conversion</div></div></div>
+  </div>
+</section>
+
+<div class="mq-wrap"><div class="mq-track"><span class="mq-item"><span class="mq-dot"></span>Clay</span><span class="mq-item"><span class="mq-dot"></span>n8n</span><span class="mq-item"><span class="mq-dot"></span>Instantly</span><span class="mq-item"><span class="mq-dot"></span>Apollo</span><span class="mq-item"><span class="mq-dot"></span>WBizz</span><span class="mq-item"><span class="mq-dot"></span>Zapier</span><span class="mq-item"><span class="mq-dot"></span>SuperAGI</span><span class="mq-item"><span class="mq-dot"></span>Creatomate</span><span class="mq-item"><span class="mq-dot"></span>Leadmagic</span><span class="mq-item"><span class="mq-dot"></span>Lusha</span><span class="mq-item"><span class="mq-dot"></span>ConnectOut</span><span class="mq-item"><span class="mq-dot"></span>Delightloop</span><span class="mq-item"><span class="mq-dot"></span>Brevo</span><span class="mq-item"><span class="mq-dot"></span>PlusVibe</span><span class="mq-item"><span class="mq-dot"></span>Smartlead</span><span class="mq-item"><span class="mq-dot"></span>Selzy</span><span class="mq-item"><span class="mq-dot"></span>PhantomBuster</span><span class="mq-item"><span class="mq-dot"></span>Surfe</span><span class="mq-item"><span class="mq-dot"></span>LeadSquared</span><span class="mq-item"><span class="mq-dot"></span>Freshsales</span><span class="mq-item"><span class="mq-dot"></span>Activepieces</span><span class="mq-item"><span class="mq-dot"></span>Brandjet.ai</span><span class="mq-item"><span class="mq-dot"></span>Clay</span><span class="mq-item"><span class="mq-dot"></span>n8n</span><span class="mq-item"><span class="mq-dot"></span>Instantly</span><span class="mq-item"><span class="mq-dot"></span>Apollo</span><span class="mq-item"><span class="mq-dot"></span>WBizz</span><span class="mq-item"><span class="mq-dot"></span>Zapier</span><span class="mq-item"><span class="mq-dot"></span>SuperAGI</span><span class="mq-item"><span class="mq-dot"></span>Creatomate</span><span class="mq-item"><span class="mq-dot"></span>Leadmagic</span><span class="mq-item"><span class="mq-dot"></span>Lusha</span><span class="mq-item"><span class="mq-dot"></span>ConnectOut</span><span class="mq-item"><span class="mq-dot"></span>Delightloop</span><span class="mq-item"><span class="mq-dot"></span>Brevo</span><span class="mq-item"><span class="mq-dot"></span>PlusVibe</span><span class="mq-item"><span class="mq-dot"></span>Smartlead</span><span class="mq-item"><span class="mq-dot"></span>Selzy</span><span class="mq-item"><span class="mq-dot"></span>PhantomBuster</span><span class="mq-item"><span class="mq-dot"></span>Surfe</span><span class="mq-item"><span class="mq-dot"></span>LeadSquared</span><span class="mq-item"><span class="mq-dot"></span>Freshsales</span><span class="mq-item"><span class="mq-dot"></span>Activepieces</span><span class="mq-item"><span class="mq-dot"></span>Brandjet.ai</span></div></div>
+
+<section id="events" class="sec">
+  <div class="events-header">
+    <div><div class="sec-eye reveal">Events GTM&rsquo;d</div><h2 class="sec-title reveal reveal-d1">11+ events.<br><em>Every seat earned.</em></h2></div>
+    <p class="sec-sub reveal reveal-d2" style="margin-bottom:0">No paid ads doing the heavy lifting. Just ICP-defined outreach across email, LinkedIn, and WhatsApp &mdash; for product leadership events attended by CXOs from Microsoft, Google, Salesforce and more.</p>
+  </div>
+  <div class="events-grid reveal reveal-d3">
+    <div class="ev feat" data-n="01">
+      <div class="ev-tag"><span class="ev-pip"></span>Flagship &middot; Annual &middot; 23rd Edition</div>
+      <div class="ev-name">PLF Convergence</div>
+      <p class="ev-desc">India&rsquo;s largest product leadership conference. 2-day AI conference format. CXOs from Microsoft, Google, Salesforce, Dr. Reddy&rsquo;s, ADP, Lloyds. Workshops, panels, speed mentoring, Talentathon.</p>
+      <div class="ev-cities"><span class="ctag">Hyderabad 2026 &check;</span><span class="ctag">Bangalore 2026 &check;</span></div>
+      <div class="ev-stats">
+        <div class="es"><span class="es-n counter" data-target="140">0</span><span class="es-l">GTM fills &middot; Hyd</span></div>
+        <div class="es"><span class="es-n counter" data-target="54">0</span><span class="es-l">GTM fills &middot; Blr</span></div>
+        <div class="es"><span class="es-n">2</span><span class="es-l">Editions led</span></div>
+      </div>
+      <div class="ev-bar"></div>
+    </div>
+    <div class="ev" data-n="02">
+      <div class="ev-tag"><span class="ev-pip"></span>Workshop Series &middot; 5 Editions</div>
+      <div class="ev-name">Skill Festival<br>(AI Playbook)</div>
+      <p class="ev-desc">Hands-on AI workshops &mdash; Agentic AI, Vibe Coding, AI decision-making. 5 editions run, crossed 50 every single time.</p>
+      <div class="ev-cities"><span class="ctag">Bengaluru</span><span class="ctag">Online</span></div>
+      <div class="ev-stats"><div class="es"><span class="es-n">50+</span><span class="es-l">Per edition</span></div><div class="es"><span class="es-n">5</span><span class="es-l">Editions</span></div></div>
+      <div class="ev-bar"></div>
+    </div>
+    <div class="ev reveal reveal-d1" data-n="03">
+      <div class="ev-tag"><span class="ev-pip"></span>Career Workshop &middot; Recurring</div>
+      <div class="ev-name">CTW / MCT<br>Bengaluru</div>
+      <p class="ev-desc">Mid-career transition workshop for 5+ year professionals. Full-day format with career anchor assessments and Talentathon hiring.</p>
+      <div class="ev-cities"><span class="ctag">Bengaluru &middot; 4&times;</span></div>
+      <div class="ev-stats"><div class="es"><span class="es-n">70+</span><span class="es-l">Leads/edition</span></div><div class="es"><span class="es-n">4</span><span class="es-l">Editions</span></div></div>
+      <div class="ev-bar"></div>
+    </div>
+    <div class="ev reveal reveal-d2" data-n="04">
+      <div class="ev-tag"><span class="ev-pip"></span>Career Workshop</div>
+      <div class="ev-name">CTW / MCT<br>Hyderabad</div>
+      <p class="ev-desc">Same format, Hyderabad&rsquo;s GCC product ecosystem. Targeting senior PMs and engineering leaders at scale.</p>
+      <div class="ev-cities"><span class="ctag">Hyderabad &middot; 2&times;</span></div>
+      <div class="ev-stats"><div class="es"><span class="es-n">70+</span><span class="es-l">Leads/edition</span></div><div class="es"><span class="es-n">2</span><span class="es-l">Editions</span></div></div>
+      <div class="ev-bar"></div>
+    </div>
+    <div class="ev reveal reveal-d3" data-n="05">
+      <div class="ev-tag"><span class="ev-pip"></span>Career Workshop &middot; Cold City Start</div>
+      <div class="ev-name">CTW / MCT<br>Pune</div>
+      <p class="ev-desc">Expanded to Pune&rsquo;s fintech + product base. Built audience from zero &mdash; cold outreach into a city PLF had no prior presence.</p>
+      <div class="ev-cities"><span class="ctag">Pune &middot; 1&times;</span></div>
+      <div class="ev-stats"><div class="es"><span class="es-n">70+</span><span class="es-l">High-profile leads</span></div><div class="es"><span class="es-n">0&rarr;full</span><span class="es-l">City cold-start</span></div></div>
+      <div class="ev-bar"></div>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<div class="dark-sec" id="systems">
+  <div class="dark-inner">
+    <div class="dark-header">
+      <div><div class="sec-eye reveal">What I actually did</div><h2 class="sec-title reveal reveal-d1">Not &ldquo;ran campaigns&rdquo;.<br><em style="color:rgba(255,255,255,.3)">Built the whole engine.</em></h2></div>
+      <p class="sec-sub reveal reveal-d2" style="margin-bottom:0">Every number below is from a real system I designed, built, and ran &mdash; not a template I plugged numbers into.</p>
+    </div>
+    <div class="work-grid">
+      <div class="wc reveal"><div class="wc-n counter" data-target="9" data-suffix="%">0%</div><div class="wc-title">Cold Email &rarr; Paid Registration</div><div class="wc-desc">3-segment campaign across 6,000 leads for IPL&rsquo;s AI Workshop at &#8377;1,499. Role-specific copy, credibility hooks, urgency laddering. Fixed SPF/DKIM deliverability issues on ipl.university domain mid-campaign without pausing sends.</div><div class="wc-tools"><span class="wt">Instantly</span><span class="wt">Selzy</span><span class="wt">Clay</span><span class="wt">Apollo</span><span class="wt">Deliverability audit</span></div></div>
+      <div class="wc reveal reveal-d1"><div class="wc-n counter" data-target="140">0</div><div class="wc-title">ICP fills &mdash; PLF Hyderabad 2026</div><div class="wc-desc">2-day AI conference for senior PMs, engineering leaders, product founders. Built a 50-day battle plan, mapped 105 GCC companies (38 product-focused), ran coordinated email + WhatsApp + LinkedIn sequences. 140 paid, ICP-defined attendees.</div><div class="wc-tools"><span class="wt">Clay</span><span class="wt">WBizz</span><span class="wt">ConnectOut</span><span class="wt">PlusVibe</span><span class="wt">Delightloop</span></div></div>
+      <div class="wc reveal reveal-d2"><div class="wc-n">65&ndash;70%</div><div class="wc-title">Open Rate &middot; Across all campaigns</div><div class="wc-desc">Consistent 65&ndash;70% open rates &mdash; 4&times; industry benchmark. Achieved through domain warmup, tight list hygiene, proper authentication setup, and subject line A/B testing across every cohort.</div><div class="wc-tools"><span class="wt">Brevo</span><span class="wt">PlusVibe</span><span class="wt">Smartlead</span><span class="wt">Snov.io</span></div></div>
+      <div class="wc reveal reveal-d3"><div class="wc-n">30&ndash;35%</div><div class="wc-title">Reply Rate &middot; Multi-touch sequences</div><div class="wc-desc">3-channel coordinated outreach &mdash; email (D1), LinkedIn (D3), WhatsApp (D5) &mdash; with reply-detection auto-halting sequences on response and routing to CRM. Fully automated via n8n + Zapier, zero manual sends.</div><div class="wc-tools"><span class="wt">n8n</span><span class="wt">Zapier</span><span class="wt">WBizz</span><span class="wt">ConnectOut</span><span class="wt">LeadSquared</span></div></div>
+      <div class="wc reveal reveal-d4"><div class="wc-n">1,500<sup>+</sup></div><div class="wc-title">ICP Leads / Quarter &middot; Automated pipeline</div><div class="wc-desc">End-to-end GTM engine for Adaptive Marketing India &mdash; scraping, enrichment, personalised outreach, AI follow-ups, live dashboard. 100+ hours of manual work eliminated per month. 40% ICP conversion rate.</div><div class="wc-tools"><span class="wt">Clay</span><span class="wt">Apollo</span><span class="wt">Lusha</span><span class="wt">n8n</span><span class="wt">SuperAGI</span><span class="wt">Sheets</span></div></div>
+      <div class="wc reveal reveal-d5"><div class="wc-n">100%</div><div class="wc-title">Automated &middot; AI video personalisation</div><div class="wc-desc">n8n workflow pulling prospect data &rarr; Creatomate generating a custom video per lead (name, company, context dynamically injected) &rarr; auto-send via email. Zero manual production steps, fully API-orchestrated.</div><div class="wc-tools"><span class="wt">Creatomate</span><span class="wt">n8n</span><span class="wt">OpenAI API</span><span class="wt">Brandjet.ai</span><span class="wt">Instantly</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── TESTIMONIALS ── -->
+<section class="testi-sec">
+  <div class="testi-header">
+    <div><div class="sec-eye reveal">What people say</div><h2 class="sec-title reveal reveal-d1">From the people<br><em>in the room.</em></h2></div>
+    <p class="sec-sub reveal reveal-d2" style="margin-bottom:0">Colleagues, event attendees, and the people who saw the work happen live.</p>
+  </div>
+  <div class="testi-grid">
+
+    <!-- Card 1 — Arnould -->
+    <div class="tcard reveal">
+      <div class="tcard-quote">&ldquo;</div>
+      <div class="tcard-star">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="tq">Nishchith doesn&rsquo;t just &ldquo;run outreach&rdquo; &mdash; he builds systems. For PLF Hyderabad, he mapped the entire GCC ecosystem, defined the ICP down to seniority and company type, and ran coordinated sequences across three channels simultaneously. 140 paid attendees speaks for itself.</p>
+      <div class="ta"><div class="ta-av g">AA</div><div><div class="ta-name">Arvind Aiyer</div></div></div>
+    </div>
+
+    <!-- Card 2 — Pinkesh -->
+    <div class="tcard reveal reveal-d1">
+      <div class="tcard-quote">&ldquo;</div>
+      <div class="tcard-star">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="tq">The cold email campaign for our AI Workshop was the tightest execution I&rsquo;ve seen on the ipl.university domain. He caught the deliverability issue before it killed the campaign, fixed it on the fly, and still hit 9% conversion. That&rsquo;s not luck &mdash; that&rsquo;s operator-level attention.</p>
+      <div class="ta"><div class="ta-av d">AA</div><div><div class="ta-name">Akash Angadi</div></div></div>
+    </div>
+
+    <!-- Card 3 — Ravi -->
+    <div class="tcard reveal reveal-d2">
+      <div class="tcard-quote">&ldquo;</div>
+      <div class="tcard-star">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="tq">I attended the Bangalore CTW after getting a cold LinkedIn message followed by a personalised WhatsApp. The outreach felt human &mdash; not spammy. That&rsquo;s rare. The event itself was brilliant. Whoever set up that funnel knew exactly who they were targeting.</p>
+      <div class="ta"><div class="ta-av o">RK</div><div><div class="ta-name">Ravi K.</div><div class="ta-role">Senior PM &middot; Attended CTW Bangalore</div></div></div>
+    </div>
+
+    <!-- Card 4 — Shruti (NEW · real unsolicited email) -->
+    <div class="tcard reveal reveal-d3">
+      <div class="tcard-quote">&ldquo;</div>
+      <div class="tcard-star">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="tq">Nischith has been a great help all through the registration process &mdash; continuous follow-ups, answering every question without hesitation. He made the whole thing smooth and prompt. I highly recommend him for the work he does at PLF.</p>
+      <div class="ta"><div class="ta-av p">SA</div><div><div class="ta-name">Shruti Agarwal</div><div class="ta-role">Founder &middot; Insight North &amp; DayOneSignal</div></div></div>
+    </div>
+
+  </div>
+</section>
+
+<div class="div"></div>
+
+<div class="flow-sec">
+  <div class="flow-inner">
+    <div class="flow-header">
+      <div><div class="sec-eye reveal">How I work</div><h2 class="sec-title reveal reveal-d1">Scrape to results.<br><em>Every single time.</em></h2></div>
+      <p class="sec-sub reveal reveal-d2" style="margin-bottom:0">Five steps, no shortcuts, every engagement. You get a system &mdash; not a service.</p>
+    </div>
+    <div class="flow-steps reveal reveal-d3">
+      <div class="fstep"><div class="fstep-num">01 &mdash;</div><div class="ficon active-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div><div class="flabel">ICP Definition</div><div class="fsub">Title, seniority, company type, buying signals.</div></div>
+      <div class="fstep"><div class="fstep-num">02 &mdash;</div><div class="ficon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg></div><div class="flabel">Scrape &amp; Enrich</div><div class="fsub">Clay + Apollo + Lusha. Verified emails and context.</div></div>
+      <div class="fstep"><div class="fstep-num">03 &mdash;</div><div class="ficon"><svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4 12.5-12.5z"/></svg></div><div class="flabel">Copy &amp; Sequence</div><div class="fsub">Role-specific hooks. A/B subjects. No blasts.</div></div>
+      <div class="fstep"><div class="fstep-num">04 &mdash;</div><div class="ficon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.8 19.8 0 01.04 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><div class="flabel">Multi-Channel</div><div class="fsub">Email &rarr; LinkedIn &rarr; WhatsApp. Automated &amp; timed.</div></div>
+      <div class="fstep"><div class="fstep-num">05 &mdash;</div><div class="ficon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div class="flabel">Lead Scoring</div><div class="fsub">Replies ranked by intent signal. Hottest leads routed first, automatically.</div></div>
+      <div class="fstep"><div class="fstep-num">06 &mdash;</div><div class="ficon active-ic"><svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><div class="flabel">Results + Handoff</div><div class="fsub">Dashboard. SOPs. Loom. You own it.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FLOWS BUILT TO LAST BANNER ── -->
+<div style="background:var(--ink);padding:72px 52px;text-align:center;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)">
+  <div style="max-width:900px;margin:0 auto">
+    <div style="font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#c4e0cf;margin-bottom:20px;display:flex;align-items:center;justify-content:center;gap:12px"><span style="display:inline-block;width:28px;height:1px;background:#c4e0cf"></span>The difference<span style="display:inline-block;width:28px;height:1px;background:#c4e0cf"></span></div>
+    <h2 style="font-family:'Fraunces',Georgia,serif;font-size:clamp(36px,5vw,72px);font-weight:400;color:#fff;line-height:1.02;letter-spacing:-2px;margin-bottom:24px">I build flows your team<br>can run <em style="color:#c4e0cf;font-style:italic">forever.</em></h2>
+    <p style="font-size:16px;color:rgba(255,255,255,.38);max-width:52ch;margin:0 auto;line-height:1.75;font-weight:400">Not a campaign that dies when I leave. Every system I build comes with full documentation, Loom walkthroughs, and SOPs so your team owns it completely &mdash; day one after handoff.</p>
+    <div style="display:flex;align-items:center;justify-content:center;gap:32px;margin-top:44px;flex-wrap:wrap">
+      <div style="text-align:center"><div style="font-family:'Fraunces',Georgia,serif;font-size:40px;color:#fff;letter-spacing:-1px;line-height:1">100%</div><div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:6px">Systems documented</div></div>
+      <div style="width:1px;height:48px;background:rgba(255,255,255,.08)"></div>
+      <div style="text-align:center"><div style="font-family:'Fraunces',Georgia,serif;font-size:40px;color:#fff;letter-spacing:-1px;line-height:1">Every</div><div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:6px">Build gets a Loom walkthrough</div></div>
+      <div style="width:1px;height:48px;background:rgba(255,255,255,.08)"></div>
+      <div style="text-align:center"><div style="font-family:'Fraunces',Georgia,serif;font-size:40px;color:#fff;letter-spacing:-1px;line-height:1">Zero</div><div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:6px">Dependency on me after handoff</div></div>
+    </div>
+  </div>
+</div>
+
+<section id="stack" class="sec">
+    <div><div class="sec-eye reveal">Tech Stack</div><h2 class="sec-title reveal reveal-d1">25+ tools.<br><em>Production-grade.</em></h2></div>
+    <p class="sec-sub reveal reveal-d2" style="margin-bottom:0">Not just familiar with &mdash; deployed in live campaigns generating real revenue.</p>
+  </div>
+  <div class="stack-cats reveal reveal-d3">
+    <div class="scat"><div class="scat-label">Automation</div><div class="scat-tools"><div class="ltool"><img src="https://logo.clearbit.com/n8n.io" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#ea4b71;display:none">n</div><span>n8n</span></div><div class="ltool"><img src="https://logo.clearbit.com/zapier.com" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#ff4a00;display:none">Z</div><span>Zapier</span></div><div class="ltool"><img src="https://logo.clearbit.com/make.com" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#6d00cc;display:none">M</div><span>Make.com</span></div><div class="ltool"><img src="https://logo.clearbit.com/activepieces.com" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#000;display:none">A</div><span>Activepieces</span></div><div class="ltool"><img src="https://logo.clearbit.com/pabbly.com" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#ff6d00;display:none">P</div><span>Pabbly</span></div></div></div>
+    <div class="scat"><div class="scat-label">Lead Gen &amp; Enrich</div><div class="scat-tools"><div class="ltool"><img src="https://logo.clearbit.com/clay.com" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#8b5cf6;display:none">C</div><span>Clay</span></div><div class="ltool"><img src="https://logo.clearbit.com/apollo.io" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#3d5afe;display:none">A</div><span>Apollo</span></div><div class="ltool"><img src="https://logo.clearbit.com/lusha.com" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#ff6b6b;display:none">L</div><span>Lusha</span></div><div class="ltool"><img src="https://logo.clearbit.com/surfe.com" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#1db954;display:none">S</div><span>Surfe</span></div><div class="ltool"><img src="https://logo.clearbit.com/snov.io" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#f97316;display:none">S</div><span>Snov.io</span></div><div class="ltool"><img src="https://logo.clearbit.com/prosp.io" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#6366f1;display:none">P</div><span>Prosp</span></div><div class="ltool"><img src="https://logo.clearbit.com/leadmagic.io" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#0ea5e9;display:none">L</div><span>Leadmagic</span></div></div></div>
+    <div class="scat"><div class="scat-label">Cold Email</div><div class="scat-tools"><div class="ltool"><img src="https://logo.clearbit.com/instantly.ai" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#2563eb;display:none">I</div><span>Instantly</span></div><div class="ltool"><img src="https://logo.clearbit.com/smartlead.ai" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#7c3aed;display:none">S</div><span>Smartlead</span></div><div class="ltool"><img src="https://logo.clearbit.com/brevo.com" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#0b996e;display:none">B</div><span>Brevo</span></div><div class="ltool"><img src="https://logo.clearbit.com/selzy.com" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#059669;display:none">S</div><span>Selzy</span></div><div class="ltool"><img src="https://logo.clearbit.com/plusvibe.io" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#ec4899;display:none">P</div><span>PlusVibe</span></div></div></div>
+    <div class="scat"><div class="scat-label">LinkedIn / WA</div><div class="scat-tools"><div class="ltool"><img src="https://logo.clearbit.com/linkedin.com" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#0077b5;display:none">L</div><span>LinkedIn SN</span></div><div class="ltool"><img src="https://logo.clearbit.com/connectout.io" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#0077b5;display:none">C</div><span>ConnectOut</span></div><div class="ltool"><img src="https://logo.clearbit.com/phantombuster.com" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#7c3aed;display:none">P</div><span>PhantomBuster</span></div><div class="ltool"><img src="https://logo.clearbit.com/wbizz.io" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#25d366;display:none">W</div><span>WBizz</span></div></div></div>
+    <div class="scat"><div class="scat-label">AI &amp; Video</div><div class="scat-tools"><div class="ltool"><img src="https://logo.clearbit.com/superagi.com" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#6d28d9;display:none">S</div><span>SuperAGI</span></div><div class="ltool"><img src="https://logo.clearbit.com/openai.com" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#10a37f;display:none">O</div><span>OpenAI API</span></div><div class="ltool"><img src="https://logo.clearbit.com/creatomate.com" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#f43f5e;display:none">C</div><span>Creatomate</span></div><div class="ltool"><img src="https://logo.clearbit.com/brandjet.ai" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#f59e0b;display:none">B</div><span>Brandjet.ai</span></div></div></div>
+    <div class="scat"><div class="scat-label">CRM &amp; Events</div><div class="scat-tools"><div class="ltool"><img src="https://logo.clearbit.com/freshworks.com" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#22c55e;display:none">F</div><span>Freshsales</span></div><div class="ltool"><img src="https://logo.clearbit.com/leadsquared.com" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#ef4444;display:none">L</div><span>LeadSquared</span></div><div class="ltool"><img src="https://logo.clearbit.com/delightloop.com" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#8b5cf6;display:none">D</div><span>Delightloop</span></div><div class="ltool"><img src="https://logo.clearbit.com/razorpay.com" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#2d6be4;display:none">R</div><span>Razorpay</span></div><div class="ltool"><img src="https://logo.clearbit.com/townscript.com" onerror="this.style.display='none';this.nextSibling.style.display='flex'" alt=""><div class="lico" style="background:#f97316;display:none">T</div><span>Townscript</span></div></div></div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<div class="book-outer" id="book">
+  <div>
+    <div class="book-kicker reveal">Work with me</div>
+    <h2 class="sec-title reveal reveal-d1">Let&rsquo;s build<br><em>your system.</em></h2>
+    <div class="book-quote reveal reveal-d2">I&rsquo;m not a freelancer-by-default. I&rsquo;m a GTM operator who&rsquo;s been running live campaigns inside IPL and PLF. If your goal is clear, I&rsquo;ll tell you exactly what to build, in what order, with what tools &mdash; and hand it off properly.</div>
+    <ul class="guarantee reveal reveal-d3">
+      <li><div class="gchk">&#10003;</div>Response within 24 hours, every time</li>
+      <li><div class="gchk">&#10003;</div>Scoped proposal before any commitment from you</li>
+      <li><div class="gchk">&#10003;</div>Delivered with full SOPs + Loom walkthrough</li>
+      <li><div class="gchk">&#10003;</div>Your team can run it without me after handoff</li>
+      <li><div class="gchk">&#10003;</div>Numbers tied to real outcomes, not vanity metrics</li>
+    </ul>
+  </div>
+  <div class="reveal reveal-d2">
+    <div class="bcard">
+      <div class="bcard-title">New Task Request</div>
+      <div class="bcard-sub">// Direct to Nishchith. No drip. No funnel. Just a real conversation.</div>
+      <div id="cform">
+        <div class="fg">
+          <div class="fr"><div class="fw"><label>Name</label><input type="text" id="fn" placeholder="Riya Sharma"></div><div class="fw"><label>Company</label><input type="text" id="fc" placeholder="Acme Corp"></div></div>
+          <div class="fw"><label>Email</label><input type="email" id="fe" placeholder="riya@acmecorp.com"></div>
+          <div class="fw"><label>Service Needed</label><select id="fs"><option value="" disabled selected>Select...</option><option>End-to-End GTM Engine</option><option>Cold Email Infrastructure</option><option>Multi-Touch Outreach System</option><option>Workflow Automation Build</option><option>AI Video Personalisation</option><option>Event GTM Campaign</option><option>Something Custom</option></select></div>
+          <div class="fw"><label>What does success look like?</label><textarea id="fg" placeholder="e.g. 50 qualified demos/month from cold outreach targeting FinTech CTOs in Bangalore..."></textarea></div>
+          <button class="fsub-btn" onclick="submitF()">Send Request &rarr;</button>
+        </div>
+      </div>
+      <div class="success" id="suc"><div class="stk">&#10003;</div><h4>Got it. Coming back to you.</h4><p>// In your inbox within 24h. No spam. Just me. &#129309;</p></div>
+      <div class="bcard-meta"><a href="https://www.linkedin.com/in/nischith-u-shetty" target="_blank">LinkedIn &nearr;</a><a href="mailto:ushettynischith@gmail.com">ushettynischith@gmail.com</a></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="flogo">Nish<em>chith U Shetty</em></div>
+  <ul class="footer-links"><li><a href="#events">Events</a></li><li><a href="#systems">Systems</a></li><li><a href="#stack">Stack</a></li><li><a href="https://www.linkedin.com/in/nischith-u-shetty" target="_blank">LinkedIn &nearr;</a></li></ul>
+  <div class="fr-txt">&copy; 2026 &middot; GTM &amp; AI Automation Engineer &middot; Bengaluru, IN</div>
+</footer>
+
+<script>
+const cur=document.getElementById('cur');
+document.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px'});
+document.querySelectorAll('a,button,.ev,.wc,.tcard,.ltool,.hstat,.fstep').forEach(el=>{
+  el.addEventListener('mouseenter',()=>cur.classList.add('big'));
+  el.addEventListener('mouseleave',()=>cur.classList.remove('big'));
+});
+document.addEventListener('mousedown',()=>cur.classList.add('click'));
+document.addEventListener('mouseup',()=>cur.classList.remove('click'));
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')})},{threshold:0.07});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+function animCount(el){
+  const target=+el.dataset.target,suffix=el.dataset.suffix||'',dur=1800,start=performance.now();
+  function step(now){const p=Math.min((now-start)/dur,1),ease=1-Math.pow(1-p,4);el.textContent=Math.round(ease*target)+suffix;if(p<1)requestAnimationFrame(step)}
+  requestAnimationFrame(step);
+}
+const cObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){animCount(e.target);cObs.unobserve(e.target)}})},{threshold:0.4});
+document.querySelectorAll('.counter').forEach(el=>cObs.observe(el));
+function submitF(){
+  const n=document.getElementById('fn').value.trim(),e=document.getElementById('fe').value.trim(),s=document.getElementById('fs').value,g=document.getElementById('fg').value.trim();
+  if(!n||!e||!s||!g){alert('Fill all fields!');return}
+  const sub=encodeURIComponent('GTM Task Request: '+s);
+  const body=encodeURIComponent('Name: '+n+'\nEmail: '+e+'\nCompany: '+document.getElementById('fc').value+'\n\nService: '+s+'\n\nGoal:\n'+g);
+  window.location.href='mailto:ushettynischith@gmail.com?subject='+sub+'&body='+body;
+  document.getElementById('cform').style.display='none';
+  document.getElementById('suc').style.display='block';
+}
+</script>
+</body>
+</html>

@@ -434,6 +434,15 @@
     footer{flex-direction:column;text-align:center}
     .fr{grid-template-columns:1fr}
   }
+
+  /* Loading state for the personalization demo. */
+  .demo-input button{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:9px}
+  .demo-input button:disabled{cursor:wait;opacity:.92}
+  .demo-input button.is-loading::before{content:'';width:12px;height:12px;border:2px solid rgba(10,10,10,.3);border-top-color:#0a0a0a;border-radius:50%;animation:demoSpin .7s linear infinite}
+  .demo-loading{display:flex;align-items:center;gap:11px;min-height:130px;color:var(--ink2);font-family:var(--mono);font-size:12px;line-height:1.5}
+  .demo-loading-bars{display:flex;gap:4px;align-items:center;height:20px}.demo-loading-bars i{display:block;width:3px;height:7px;background:var(--accent);animation:demoBars 1s ease-in-out infinite}.demo-loading-bars i:nth-child(2){animation-delay:.12s}.demo-loading-bars i:nth-child(3){animation-delay:.24s}
+  @keyframes demoSpin{to{transform:rotate(360deg)}}@keyframes demoBars{0%,100%{height:6px;opacity:.35}50%{height:19px;opacity:1}}
+
   /* Phone fix: keep the personalization action visible and easy to tap. */
   @media(max-width:620px){
     .demo-wrap{padding:56px 0}
@@ -956,7 +965,7 @@
         <div class="demo-input">
           <input id="demoName" type="text" placeholder="Your name" maxlength="40">
           <input id="demoCo" type="text" placeholder="Your company" maxlength="40">
-          <button onclick="personalize()">Generate →</button>
+          <button id="demoGenerate" type="button" onclick="personalize()"><span>Generate →</span></button>
         </div>
       </div>
     </div>
@@ -1121,25 +1130,34 @@
     const c=document.getElementById('demoCo').value.trim()||'your company';
     const out=document.getElementById('demoBody');
     const sub=document.querySelector('#demoOut .sub');
-    // a few rotating angles to feel real
-    const subjects=[
-      `${c} hiring → quick GTM idea`,
-      `${n}, saw ${c}'s product team — 2 min?`,
-      `${c} + 65% open rates`,
-      `Quick thought for ${n} at ${c}`
-    ];
-    sub.textContent='Subject: '+subjects[Math.floor(Math.random()*subjects.length)];
-
-    const variants=[
-      `Hey <span class="pname">${escape(n)}</span>,<br><br>Noticed <span class="pname">${escape(c)}</span> is scaling outbound — I just shipped a sequence that hit 67% open + 31% reply for a similar profile.<br><br>Worth a 20-min walkthrough? Happy to send the playbook either way.<br><br>— Nishchith`,
-      `Hey <span class="pname">${escape(n)}</span>,<br><br>Quick one. Built end-to-end GTM engines for 11+ product leadership events — 140 paid attendees on the last one, all ICP-defined.<br><br>If <span class="pname">${escape(c)}</span> is figuring out cold pipeline, I can probably save you a quarter of guessing.<br><br>— Nishchith`,
-      `Hi <span class="pname">${escape(n)}</span>,<br><br>Saw <span class="pname">${escape(c)}</span> in my Clay enrichment yesterday. Won't pretend I know your stack — but I do know what gets a 9% cold→paid conversion on a ₹1,499 product.<br><br>Open to a chat?<br><br>— Nishchith`
-    ];
-    out.innerHTML=variants[Math.floor(Math.random()*variants.length)];
-    // pulse glow
-    out.style.transition='background .4s';
-    out.style.background='rgba(200,255,78,.04)';
-    setTimeout(()=>out.style.background='transparent',600);
+    const btn=document.getElementById('demoGenerate');
+    if(btn.disabled)return;
+    btn.disabled=true;
+    btn.classList.add('is-loading');
+    btn.querySelector('span').textContent='Researching signals…';
+    sub.textContent='Signal scan in progress · verifying context…';
+    out.innerHTML='<div class="demo-loading" role="status"><span class="demo-loading-bars"><i></i><i></i><i></i></span><span>Checking role, company context, and the strongest GTM angle…</span></div>';
+    setTimeout(()=>{
+      const subjects=[
+        `${c} hiring → quick GTM idea`,
+        `${n}, saw ${c}'s product team — 2 min?`,
+        `${c} + 65% open rates`,
+        `Quick thought for ${n} at ${c}`
+      ];
+      sub.textContent='Subject: '+subjects[Math.floor(Math.random()*subjects.length)];
+      const variants=[
+        `Hey <span class="pname">${escape(n)}</span>,<br><br>Noticed <span class="pname">${escape(c)}</span> is scaling outbound — I just shipped a sequence that hit 67% open + 31% reply for a similar profile.<br><br>Worth a 20-min walkthrough? Happy to send the playbook either way.<br><br>— Nishchith`,
+        `Hey <span class="pname">${escape(n)}</span>,<br><br>Quick one. Built end-to-end GTM engines for 11+ product leadership events — 140 paid attendees on the last one, all ICP-defined.<br><br>If <span class="pname">${escape(c)}</span> is figuring out cold pipeline, I can probably save you a quarter of guessing.<br><br>— Nishchith`,
+        `Hi <span class="pname">${escape(n)}</span>,<br><br>Saw <span class="pname">${escape(c)}</span> in my Clay enrichment yesterday. Won't pretend I know your stack — but I do know what gets a 9% cold→paid conversion on a ₹1,499 product.<br><br>Open to a chat?<br><br>— Nishchith`
+      ];
+      out.innerHTML=variants[Math.floor(Math.random()*variants.length)];
+      out.style.transition='background .4s';
+      out.style.background='rgba(200,255,78,.04)';
+      btn.disabled=false;
+      btn.classList.remove('is-loading');
+      btn.querySelector('span').textContent='Generate →';
+      setTimeout(()=>out.style.background='transparent',600);
+    },1050);
   }
   function escape(s){return s.replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]))}
 

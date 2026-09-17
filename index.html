@@ -268,6 +268,7 @@
 
   /* ─── TESTIMONIAL ─────────────── */
   .tcol{display:grid;grid-template-columns:1.4fr 1fr;gap:24px;align-items:stretch}
+  .testimonial-link{color:inherit;text-decoration:none;border-bottom:1px solid var(--accent-dim);transition:color .2s,border-color .2s}.testimonial-link:hover{color:var(--accent);border-color:var(--accent)}
   .tfeat{background:linear-gradient(135deg,#0c0c0b,#13130e);border:1px solid var(--line2);border-radius:8px;padding:44px 40px;position:relative;display:flex;flex-direction:column;gap:24px}
   .tfeat::before{content:'\201C';position:absolute;top:18px;left:24px;font-family:var(--serif);font-size:80px;color:var(--accent);opacity:.18;line-height:1;font-style:italic}
   .tfeat-body{font-family:var(--serif);font-style:italic;font-size:24px;line-height:1.4;color:var(--ink);letter-spacing:-.015em;padding-top:32px}
@@ -377,6 +378,41 @@
   .reveal.in{opacity:1;transform:none}
   .rd1{transition-delay:.08s}.rd2{transition-delay:.16s}.rd3{transition-delay:.24s}.rd4{transition-delay:.32s}.rd5{transition-delay:.4s}
 
+
+  .hero-proof{max-width:52ch;margin:-16px 0 34px;color:var(--ink3);font-size:14px;line-height:1.65}.hero-proof b{color:var(--ink2);font-weight:600}.hero-sub{font-size:17px;color:var(--ink2);line-height:1.8;max-width:58ch;font-weight:400;margin-bottom:28px}
+  .systems-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-bottom:64px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden}.system-card{min-height:250px;padding:28px 26px;background:var(--bg2);transition:background .25s,transform .25s}.system-card:hover{background:var(--bg3);transform:translateY(-2px)}.system-index{margin-bottom:30px;color:var(--accent);font-family:var(--mono);font-size:10px;letter-spacing:.12em}.system-card h3{margin-bottom:12px;color:var(--ink);font-family:var(--serif);font-size:28px;font-weight:400;line-height:1.05}.system-card p{min-height:82px;color:var(--ink2);font-size:13px;line-height:1.6}.system-flow{padding-top:18px;border-top:1px solid var(--line2);color:var(--accent);font-family:var(--mono);font-size:10px;letter-spacing:.03em}
+  @media(max-width:1024px){.systems-grid{grid-template-columns:1fr;margin-bottom:48px}.system-card{min-height:auto}.system-card p{min-height:auto;margin-bottom:20px}}
+
+
+  .project-feature{border-top:1px solid var(--line);background:linear-gradient(180deg,#0b0b0a 0%,#0a0a0a 100%)}
+  .project-feature-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .project-copy{background:var(--bg2);padding:38px 34px}
+  .project-kicker,.architecture-label{font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin-bottom:24px}
+  .project-copy h3{font-family:var(--serif);font-size:38px;line-height:1.02;font-weight:400;margin-bottom:22px}
+  .project-copy p{color:var(--ink2);font-size:14px;line-height:1.7;margin-bottom:16px;max-width:60ch;}
+  .project-copy strong{color:var(--ink);font-weight:600}
+  .project-tools{display:flex;flex-wrap:wrap;gap:5px;margin-top:26px}
+  .project-architecture{background:#0d0d0c;padding:38px 34px}
+  .architecture-flow{font-family:var(--mono);font-size:11px}
+  .architecture-node{display:flex;align-items:center;gap:14px;padding:13px 14px;border:1px solid var(--line2);background:rgba(255,255,255,.02);color:var(--ink2);border-radius:4px}
+  .architecture-node span{color:var(--accent);font-size:10px}
+  .architecture-line{width:1px;height:18px;background:var(--accent-dim);margin-left:20px}
+  .project-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:24px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .project-metrics div{background:var(--bg2);padding:24px 20px;display:flex;flex-direction:column;gap:7px}
+  .project-metrics strong{font-family:var(--serif);font-size:27px;font-weight:400;color:var(--accent)}
+  .project-metrics span{font-family:var(--mono);font-size:9px;color:var(--ink3);letter-spacing:.06em;text-transform:uppercase}
+  .project-solved{margin-top:24px;padding:30px 32px;background:var(--bg2);border:1px solid var(--line);border-radius:8px}
+  .solved-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px 30px}
+  .solved-grid p{color:var(--ink2);font-size:13px;line-height:1.55;padding-left:16px;border-left:1px solid var(--accent-dim)}
+  @media(max-width:1024px){.project-feature-grid{grid-template-columns:1fr}.project-metrics{grid-template-columns:1fr 1fr}.solved-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:620px){.project-copy,.project-architecture{padding:28px 22px}.project-copy h3{font-size:32px}.project-metrics{grid-template-columns:1fr}.solved-grid{grid-template-columns:1fr}}
+
+
+  .proof-section{border-top:1px solid var(--line);background:#0b0b0a}.workflow-showcase{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden}.workflow-demo{background:var(--bg2);padding:28px}.workflow-demo-head{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;margin-bottom:20px}.workflow-tag{font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:.09em;text-transform:uppercase}.workflow-demo h3{font-family:var(--serif);font-size:32px;font-weight:400;line-height:1;margin-top:9px}.workflow-status{font-family:var(--mono);font-size:9px;color:var(--ink3);border:1px solid var(--line2);padding:5px 7px}.workflow-window{height:260px;position:relative;overflow:hidden;border:1px solid var(--line2);border-radius:5px;background:#f8f8f6;margin-bottom:18px;box-shadow:0 15px 35px rgba(0,0,0,.28)}.window-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,0,0,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.035) 1px,transparent 1px);background-size:32px 32px;z-index:1}.workflow-pan{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;animation:workflowPan 14s ease-in-out infinite alternate}.workflow-pan img{width:100%;height:auto;min-height:100%;object-fit:cover;object-position:center;filter:saturate(.9);opacity:.92}.n8n-pan{animation-duration:16s}.n8n-pan img{object-fit:cover;object-position:center}.workflow-demo p{color:var(--ink2);font-size:13px;line-height:1.6}.workflow-demo:hover .workflow-pan{animation-play-state:paused}.proof-cta{display:flex;justify-content:space-between;align-items:center;gap:28px;margin-top:24px;padding:28px 32px;background:linear-gradient(135deg,#12120f,#0f0f0e);border:1px solid var(--line2);border-radius:8px}.proof-cta h3{font-family:var(--serif);font-size:32px;font-weight:400;margin:10px 0 7px}.proof-cta p{color:var(--ink2);font-size:14px}.proof-cta .btn span{font-size:18px}@keyframes workflowPan{0%{transform:scale(1.02) translate3d(0,1%,0)}45%{transform:scale(1.15) translate3d(-4%,-2%,0)}100%{transform:scale(1.08) translate3d(3%,2%,0)}}@media(prefers-reduced-motion:reduce){.workflow-pan{animation:none}}@media(max-width:850px){.workflow-showcase{grid-template-columns:1fr}.proof-cta{flex-direction:column;align-items:flex-start}}@media(max-width:620px){.workflow-demo{padding:22px}.workflow-window{height:210px}.proof-cta{padding:24px 22px}.proof-cta h3{font-size:28px}}
+
+
+  .inflight-panel{min-height:300px;margin-top:24px;background:#1a1a19;border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex}.inflight-card{width:34%;min-width:330px;background:linear-gradient(180deg,#10100f,#0d0d0c);padding:34px 32px;display:flex;flex-direction:column}.inflight-kicker{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--ink3);margin-bottom:34px}.inflight-dot{display:inline-block;width:7px;height:7px;background:var(--accent);border-radius:50%;margin-right:10px;box-shadow:0 0 10px var(--accent)}.inflight-card h3{font-family:var(--serif);font-size:36px;font-weight:400;line-height:1;margin-bottom:18px}.inflight-card p{color:var(--ink2);font-size:14px;line-height:1.65}.inflight-card p strong{color:var(--ink);font-weight:600}.inflight-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:15px;border-top:1px solid var(--line);padding-top:20px;margin-top:auto}.inflight-tags{display:flex;gap:5px}.inflight-number{text-align:right}.inflight-number strong{display:block;color:var(--accent);font-family:var(--serif);font-size:42px;font-weight:400;line-height:.9}.inflight-number span{display:block;color:var(--ink3);font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;margin-top:8px}@media(max-width:700px){.inflight-panel{min-height:0}.inflight-card{width:100%;min-width:0;min-height:300px}}
+
   /* ─── RESPONSIVE ─────────────── */
   @media(max-width:1024px){
     nav{padding:0 18px}
@@ -406,7 +442,7 @@
 <nav>
   <a href="#" class="logo">
     <span class="logo-pip"></span>
-    <span>Nishchith <em>Shetty</em></span>
+    <span>nishchith<em>.shetty</em></span>
   </a>
   <div class="nav-status">
     <span><span class="dot"></span>AVAILABLE · Q3 2026</span>
@@ -423,50 +459,15 @@
 <!-- ─── HERO ─── -->
 <section class="hero">
   <div class="hero-left">
-    <div class="eyebrow reveal">
-      <span class="live"></span>
-      GTM &amp; AI Automation Engineer · Bengaluru, IN
-    </div>
-    <h1 class="headline">
-      <span class="l1 reveal rd1">I don't run</span>
-      <span class="l2 reveal rd2">campaigns.</span>
-      <span class="l2 reveal rd3"><em>I build engines.</em></span>
-    </h1>
-    <p class="hero-sub reveal rd4">
-      ICP definition → enriched lists → AI-sequenced outreach → live dashboard → SOPs your team owns.
-      <span class="pill">25+ tools</span> in production. <b>Zero hand-holding</b> after handoff.
-    </p>
-    <div class="hero-cta reveal rd5">
-      <a href="#book" class="btn btn-pri">
-        Send me your goal
-        <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg>
-      </a>
-      <a href="#systems" class="btn btn-sec">See the work →</a>
-    </div>
+    <div class="eyebrow reveal"><span class="live"></span>GTM ENGINEER · AI AUTOMATION · BENGALURU, IN</div>
+    <h1 class="headline"><span class="l1 reveal rd1">I build GTM</span><span class="l2 reveal rd2">systems that turn</span><span class="l2 reveal rd3"><em>signals into pipeline.</em></span></h1>
+    <p class="hero-sub reveal rd4">I design the infrastructure behind modern outbound: <span class="pill">ICP definition</span> <span class="pill">enrichment</span> <span class="pill">AI research</span> <span class="pill">signal-based targeting</span> <span class="pill">routing</span> <span class="pill">reporting</span></p>
+    <p class="hero-proof reveal rd4">Built and operated systems generating <b>1,500+ ICP-qualified leads per quarter</b> across data, automation, outreach, and deliverability.</p>
+    <div class="hero-cta reveal rd5"><a href="#systems" class="btn btn-pri">View the systems <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a><a href="#book" class="btn btn-sec">Contact me</a></div>
   </div>
-
-  <!-- Live console — the right side -->
-  <div class="console reveal rd3">
-    <div class="console-bar">
-      <div class="console-dots"><span></span><span></span><span></span></div>
-      <div class="console-title">~/nishchith/gtm-engine.live</div>
-    </div>
-    <div class="console-body" id="terminal">
-      <div class="console-row"><span class="gut">01</span><span><span class="cl">$</span> <span class="ck">scrape</span> --icp <span class="cs">"senior PM, GCC, Hyd"</span> --enrich</span></div>
-      <div class="console-row"><span class="gut">02</span><span class="cc">→ 105 companies · 38 product-focused</span></div>
-      <div class="console-row"><span class="gut">03</span><span><span class="cl">$</span> <span class="ck">sequence</span> email,linkedin,whatsapp <span class="cv">--auto-halt-on-reply</span></span></div>
-      <div class="console-row"><span class="gut">04</span><span class="cc">→ opened: 67% · replied: 31%</span></div>
-      <div class="console-row"><span class="gut">05</span><span><span class="cl">$</span> <span class="ck">score</span> replies --route hot → CRM</span></div>
-      <div class="console-row"><span class="gut">06</span><span class="cc">→ 140 paid registrations · ICP-defined</span></div>
-      <div class="console-row"><span class="gut">07</span><span><span class="cl">$</span> <span class="ck">handoff</span> --include sops,loom,dashboard</span></div>
-      <div class="console-row"><span class="gut">08</span><span class="cs typing">  status: SHIPPED ✓</span></div>
-    </div>
-    <div class="console-foot">
-      <div class="cf-cell"><div class="cf-n">140</div><div class="cf-l">PLF Hyd</div></div>
-      <div class="cf-cell"><div class="cf-n">9%</div><div class="cf-l">Cold→Paid</div></div>
-      <div class="cf-cell"><div class="cf-n">67%</div><div class="cf-l">Open rate</div></div>
-    </div>
-  </div>
+  <div class="console reveal rd3"><div class="console-bar"><div class="console-dots"><span></span><span></span><span></span></div><div class="console-title">~/nishchith/gtm-engine.live</div></div><div class="console-body" id="terminal">
+      <div class="console-row"><span class="gut">01</span><span><span class="cl">$</span> <span class="ck">define</span> --icp accounts,people,signals</span></div><div class="console-row"><span class="gut">02</span><span class="cc">→ 1,500+ ICP-qualified leads / quarter</span></div><div class="console-row"><span class="gut">03</span><span><span class="cl">$</span> <span class="ck">enrich</span> --clay --ai-research --validate</span></div><div class="console-row"><span class="gut">04</span><span class="cc">→ company → person → signal → qualification</span></div><div class="console-row"><span class="gut">05</span><span><span class="cl">$</span> <span class="ck">route</span> replies --auto-halt-on-reply</span></div><div class="console-row"><span class="gut">06</span><span class="cc">→ email · LinkedIn · WhatsApp · CRM</span></div><div class="console-row"><span class="gut">07</span><span><span class="cl">$</span> <span class="ck">handoff</span> --sops --dashboard --audit-trail</span></div><div class="console-row"><span class="gut">08</span><span class="cs typing"> status: SHIPPED ✓</span></div>
+    </div><div class="console-foot"><div class="cf-cell"><div class="cf-n">1.5K+</div><div class="cf-l">ICP / quarter</div></div><div class="cf-cell"><div class="cf-n">50K+</div><div class="cf-l">Prospects</div></div><div class="cf-cell"><div class="cf-n">100+</div><div class="cf-l">Hours saved</div></div></div></div>
 </section>
 
 <!-- ─── STRIP ─── -->
@@ -489,16 +490,157 @@
 </div>
 
 <!-- ─── SYSTEMS / WORK ─── -->
+
+
+<section class="sec project-feature" id="medical-gtm-system">
+  <div class="sec-head">
+    <div>
+      <div class="sec-eye reveal">Selected GTM engineering project</div>
+      <h2 class="sec-title reveal rd1">Referenceability<br><em>with evidence.</em></h2>
+    </div>
+    <p class="sec-sub reveal rd2">A Clay-based GTM intelligence and qualification system that turned raw rehabilitation-company data into validated, suppression-checked, outreach-ready records.</p>
+  </div>
+
+  <div class="project-feature-grid">
+    <div class="project-copy reveal">
+      <div class="project-kicker">Medical software client · Clay · Heddl · US rehabilitation market</div>
+      <h3>From company data to qualified people.</h3>
+      <p>Built a multi-stage Clay workflow for a referenceability-led outbound campaign targeting US outpatient physical, occupational, and speech-language therapy organizations.</p>
+      <p>The workflow separated company-level and person-level data, discovered current clinicians, validated roles and company associations using public evidence, matched prospects to known client contacts through exact company-domain logic, and calculated employment-period overlap before qualification.</p>
+      <p>It then applied suppression across customers, active pipeline, previous campaign batches, duplicates, invalid profiles, unverified roles, missing matches, and missing overlap before preparing personalized routing and campaign fields for Heddl.</p>
+      <div class="project-tools"><span class="wt">Clay</span><span class="wt">Structured AI research</span><span class="wt">Public web research</span><span class="wt">Heddl</span><span class="wt">CSV data modeling</span><span class="wt">Google Slides</span></div>
+    </div>
+
+    <div class="project-architecture reveal rd1">
+      <div class="architecture-label">CLAY WORKFLOW ARCHITECTURE</div>
+      <div class="architecture-flow">
+        <div class="architecture-node"><span>01</span>ICP + company qualification</div>
+        <div class="architecture-line"></div>
+        <div class="architecture-node"><span>02</span>Clinician discovery</div>
+        <div class="architecture-line"></div>
+        <div class="architecture-node"><span>03</span>Role + company validation</div>
+        <div class="architecture-line"></div>
+        <div class="architecture-node"><span>04</span>Domain + employment matching</div>
+        <div class="architecture-line"></div>
+        <div class="architecture-node"><span>05</span>Referenceability qualification</div>
+        <div class="architecture-line"></div>
+        <div class="architecture-node"><span>06</span>Suppression + Heddl export</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-metrics reveal rd2">
+    <div><strong>Company → Person</strong><span>Data model separated</span></div>
+    <div><strong>Exact domain</strong><span>Deterministic matching</span></div>
+    <div><strong>Date overlap</strong><span>Referenceability logic</span></div>
+    <div><strong>16-record batch</strong><span>Verified next batch</span></div>
+  </div>
+
+  <div class="project-solved reveal rd3">
+    <div class="architecture-label">WHAT THE SYSTEM SOLVED</div>
+    <div class="solved-grid">
+      <p>Prevented clinic/company rows from being treated as individual people.</p>
+      <p>Returned structured person records with identity, role, company, evidence, and confidence.</p>
+      <p>Used candidate-domain = past-employer-domain instead of fuzzy company-name matching.</p>
+      <p>Required employment-period overlap before calling a prospect referenceable.</p>
+      <p>Kept raw-source tables separate from working, matching, and suppression tables.</p>
+      <p>Mapped routing fields separately from personalization fields for campaign execution.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec project-feature talentathon-project" id="talentathon-system">
+  <div class="sec-head">
+    <div>
+      <div class="sec-eye reveal">Automation case study</div>
+      <h2 class="sec-title reveal rd1">Hiring signals<br><em>with a human gate.</em></h2>
+    </div>
+    <p class="sec-sub reveal rd2">A SuperAGI and n8n workflow designed to discover Product hiring signals, qualify hiring-manager context, and route reviewable records into the GTM review tracker without unsupervised outreach.</p>
+  </div>
+
+  <div class="project-feature-grid">
+    <div class="project-copy reveal">
+      <div class="project-kicker">Talentathon · IPL · SuperAGI + n8n + SerpApi</div>
+      <h3>Research first. Approve before outreach.</h3>
+      <p>Designed a controlled hiring-signal campaign for approximately 164 target companies in the GTM review tracker. The workflow converted each company into a Product-hiring search query, processed companies in batches, discovered public job signals through SerpApi, normalized the response, removed duplicates, and validated Product relevance.</p>
+      <p>SuperAGI handled research, interpretation, and qualification. n8n handled deterministic operations including webhooks, batching, field normalization, duplicate prevention, payload mapping, and Google Sheets writes.</p>
+      <p>Qualified records were sent to a dedicated Qualified Hiring Managers tab for GTM review. Automatic outreach and BrandJet activation were intentionally disabled until job title, job URL, hiring-manager evidence, and contact quality could be validated.</p>
+      <div class="project-tools"><span class="wt">SuperAGI</span><span class="wt">n8n</span><span class="wt">SerpApi</span><span class="wt">Google Sheets</span><span class="wt">Human review</span><span class="wt">Webhooks</span></div>
+    </div>
+
+    <div class="project-architecture reveal rd1">
+      <div class="architecture-label">N8N + SUPERAGI ARCHITECTURE</div>
+      <div class="architecture-flow">
+        <div class="architecture-node"><span>01</span>Target companies in GTM review tracker</div>
+        <div class="architecture-line"></div>
+        <div class="architecture-node"><span>02</span>Batch + generate job queries</div>
+        <div class="architecture-line"></div>
+        <div class="architecture-node"><span>03</span>SerpApi Google Jobs discovery</div>
+        <div class="architecture-line"></div>
+        <div class="architecture-node"><span>04</span>Normalize + deduplicate signals</div>
+        <div class="architecture-line"></div>
+        <div class="architecture-node"><span>05</span>SuperAGI research + qualification</div>
+        <div class="architecture-line"></div>
+        <div class="architecture-node"><span>06</span>GTM review before outreach</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-metrics reveal rd2">
+    <div><strong>~164</strong><span>Target companies</span></div>
+    <div><strong>Batch of 10</strong><span>Execution validated</span></div>
+    <div><strong>Webhook</strong><span>SuperAGI → n8n handoff</span></div>
+    <div><strong>Human-in-loop</strong><span>Outreach held for approval</span></div>
+  </div>
+
+  <div class="project-solved reveal rd3">
+    <div class="architecture-label">ENGINEERING DECISIONS</div>
+    <div class="solved-grid">
+      <p>Separated AI interpretation from deterministic workflow operations.</p>
+      <p>Used stable company, title, and job URL fields for deduplication.</p>
+      <p>Kept Target Companies and Qualified Hiring Managers as separate data layers.</p>
+      <p>Added GTM review as the approval boundary before any outreach activation.</p>
+      <p>Excluded BrandJet from the pilot to avoid acting on weak or false-positive signals.</p>
+      <p>Identified strict validation still needed for job title, URL, and job-linked evidence.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec proof-section" id="proof">
+  <div class="sec-head">
+    <div>
+      <div class="sec-eye reveal">Proof of work</div>
+      <h2 class="sec-title reveal rd1">See the systems<br><em>move.</em></h2>
+    </div>
+    <p class="sec-sub reveal rd2">A closer look at the Clay research layer and the n8n orchestration layer behind the GTM systems I build. The motion is designed to make the workflow readable without turning the portfolio into a demo reel.</p>
+  </div>
+  <div class="workflow-showcase reveal rd3">
+    <article class="workflow-demo">
+      <div class="workflow-demo-head"><div><span class="workflow-tag">01 · DATA + QUALIFICATION</span><h3>Clay workflow</h3></div><span class="workflow-status">CASE STUDY</span></div>
+      <div class="workflow-window clay-window"><div class="window-grid"></div><div class="workflow-pan clay-pan"><img src="assets/clay-workflow.png" alt="Sanitized Clay workflow architecture" loading="lazy"></div></div>
+      <p>Linked tables for company qualification, clinician discovery, role validation, exact-domain matching, employment overlap, suppression, and campaign export.</p>
+    </article>
+    <article class="workflow-demo">
+      <div class="workflow-demo-head"><div><span class="workflow-tag">02 · ORCHESTRATION + REVIEW</span><h3>n8n workflow</h3></div><span class="workflow-status">CASE STUDY</span></div>
+      <div class="workflow-window n8n-window"><div class="window-grid"></div><div class="workflow-pan n8n-pan"><img src="assets/n8n-workflow.png" alt="Sanitized n8n workflow architecture" loading="lazy"></div></div>
+      <p>Scheduled batch processing, job-signal discovery, normalization, deduplication, qualification, webhook handoff, and human review before outreach.</p>
+    </article>
+  </div>
+  <div class="proof-cta reveal rd4"><div><span class="workflow-tag">AVAILABLE FOR GTM ENGINEERING ROLES + PROJECTS</span><h3>Want the technical walkthrough?</h3><p>I can walk through the data model, qualification logic, automation design, and the decisions behind each system.</p></div><a class="btn btn-pri" href="assets/Nishchith_U_Shetty_ATS_Resume.pdf" download>Download résumé <span>↓</span></a></div>
+</section>
+
 <section class="sec" id="systems">
   <div class="sec-head">
     <div>
-      <div class="sec-eye reveal">What I actually built</div>
-      <h2 class="sec-title reveal rd1">Not "ran campaigns".<br><em>The whole engine.</em></h2>
+      <div class="sec-eye reveal">Systems I build</div>
+      <h2 class="sec-title reveal rd1">From signal<br><em>to pipeline.</em></h2>
     </div>
-    <p class="sec-sub reveal rd2">Every number below is from a real system I designed, built, and ran — not a template I plugged numbers into.</p>
+    <p class="sec-sub reveal rd2">I design the layer between GTM strategy and execution: reliable data, automation, qualification, routing, outreach, and reporting.</p>
   </div>
 
-  <div class="work-grid">
+  <div class="systems-grid reveal rd3"><article class="system-card"><div class="system-index">01</div><h3>ICP &amp; TAM Systems</h3><p>Turn a business hypothesis into account lists, personas, segments, exclusions, qualification rules, and campaign-ready targeting logic.</p><div class="system-flow">ICP → TAM → segments → rules</div></article><article class="system-card"><div class="system-index">02</div><h3>Enrichment &amp; Research</h3><p>Build structured company and person-level data using Clay, AI research, APIs, evidence URLs, validation, and deterministic matching.</p><div class="system-flow">source → enrich → validate → evidence</div></article><article class="system-card"><div class="system-index">03</div><h3>Signal-Based GTM</h3><p>Convert hiring, funding, technology, provider, and intent signals into prioritization, qualification, messaging, and timing decisions.</p><div class="system-flow">signals → score → qualify → prioritize</div></article><article class="system-card"><div class="system-index">04</div><h3>Routing &amp; Outreach</h3><p>Connect enrichment, personalization, email, LinkedIn, WhatsApp, CRM, reply detection, and automatic stop conditions.</p><div class="system-flow">route → personalize → sequence → stop</div></article><article class="system-card"><div class="system-index">05</div><h3>Data Quality &amp; Deliverability</h3><p>Protect campaigns with suppression, duplicate checks, role validation, domain authentication, bounce monitoring, and readiness gates.</p><div class="system-flow">check → suppress → send safely</div></article><article class="system-card"><div class="system-index">06</div><h3>Reporting &amp; Handoff</h3><p>Ship dashboards, SOPs, audit trails, Loom walkthroughs, and feedback loops so teams can operate and improve systems independently.</p><div class="system-flow">measure → document → hand off</div></article></div>
+
+<div class="work-grid">
     <div class="wc reveal">
       <div class="wc-top">
         <div class="wc-n" data-target="9" data-suffix="%">0%</div>
@@ -557,6 +699,15 @@
       <div class="wc-title">AI video personalisation per prospect</div>
       <div class="wc-desc">n8n pulls prospect data → Creatomate generates a custom video (name, company, context dynamically injected) → auto-send via email. Zero manual production.</div>
       <div class="wc-tools"><span class="wt">Creatomate</span><span class="wt">n8n</span><span class="wt">OpenAI</span><span class="wt">Brandjet.ai</span><span class="wt">Instantly</span></div>
+    </div>
+  </div>
+
+  <div class="inflight-panel reveal rd4">
+    <div class="inflight-card">
+      <div class="inflight-kicker"><span class="inflight-dot"></span>// IN FLIGHT</div>
+      <h3>Q3 2026 pipeline</h3>
+      <p>Two more PLF editions in build. Currently mapping <strong>200+ companies</strong> across Mumbai and Chennai for expansion.</p>
+      <div class="inflight-foot"><div class="inflight-tags"><span class="wt">Mumbai</span><span class="wt">Chennai</span></div><div class="inflight-number"><strong>200</strong><span>companies mapped</span></div></div>
     </div>
   </div>
 </section>
@@ -758,14 +909,14 @@
         <div class="tsmall-body">"He mapped the entire GCC ecosystem, defined ICP down to seniority, and ran sequences across three channels simultaneously. 140 paid attendees speaks for itself."</div>
         <div class="tfeat-author">
           <div class="tav">AA</div>
-          <div><div class="ta-name">Arvind Aiyer</div><div class="ta-role">PLF · Internal team</div></div>
+          <div><div class="ta-name"><a class="testimonial-link" href="https://www.linkedin.com/in/arvindaiyer/" target="_blank" rel="noopener">Arvind Aiyer ↗</a></div><div class="ta-role">PLF · Internal team</div></div>
         </div>
       </div>
       <div class="tsmall">
         <div class="tsmall-body">"Caught the deliverability issue before it killed the campaign, fixed it on the fly, still hit 9% conversion. That's operator-level attention."</div>
         <div class="tfeat-author">
           <div class="tav">AA</div>
-          <div><div class="ta-name">Akash Angadi</div><div class="ta-role">IPL · AI Workshop campaign</div></div>
+          <div><div class="ta-name"><a class="testimonial-link" href="https://www.linkedin.com/in/akash-akash14/" target="_blank" rel="noopener">Akash Angadi ↗</a></div><div class="ta-role">IPL · AI Workshop campaign</div></div>
         </div>
       </div>
     </div>
@@ -927,7 +1078,7 @@
 </section>
 
 <footer>
-  <div class="flog">Nishchith <em>Shetty</em> // GTM Engineer · BLR</div>
+  <div class="flog">nishchith<em>.shetty</em> // GTM Engineer · BLR</div>
   <ul class="flinks">
     <li><a href="#systems">Systems</a></li>
     <li><a href="#events">Events</a></li>

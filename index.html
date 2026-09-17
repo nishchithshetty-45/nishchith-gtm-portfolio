@@ -434,6 +434,16 @@
     footer{flex-direction:column;text-align:center}
     .fr{grid-template-columns:1fr}
   }
+  /* Phone fix: keep the personalization action visible and easy to tap. */
+  @media(max-width:620px){
+    .demo-wrap{padding:56px 0}
+    .demo{padding:0 18px;gap:30px}
+    .demo-mock-body{padding:22px 20px 18px;min-height:0;font-size:12px;line-height:1.65}
+    .demo-mock-head{font-size:9.5px;padding:11px 13px}
+    .demo-input{display:grid;grid-template-columns:1fr;gap:10px;margin-top:18px}
+    .demo-input input{width:100%;min-height:54px;padding:14px 15px;font-size:16px}
+    .demo-input button{width:100%;min-height:54px;padding:14px 18px;font-size:15px;display:block}
+  }
 </style>
 </head>
 <body>
